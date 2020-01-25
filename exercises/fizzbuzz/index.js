@@ -12,6 +12,20 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (isDivBy(i, 3) && isDivBy(i, 5)) {
+      console.log("fizzbuzz");
+    } else if (isDivBy(i, 5)) {
+      console.log("buzz");
+    } else if (isDivBy(i, 3)) {
+      console.log("fizz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+const isDivBy = (num, by) => num % by === 0;
 
 module.exports = fizzBuzz;

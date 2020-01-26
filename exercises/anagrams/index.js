@@ -8,12 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {
-  const cleanA = normalize(stringA);
-  const cleanB = normalize(stringB);
-
-  return cleanA === cleanB.slice(0, cleanA.length);
-}
+const anagrams = (strA, strB) => normalize(strA) === normalize(strB);
 
 const normalize = str =>
   str
